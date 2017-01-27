@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">orijinaru3</string>
+    <string name="title_activity_subject_list">SubjectListActivity</string>
+    <string name="action_setting">設定</string>
+</resources>
