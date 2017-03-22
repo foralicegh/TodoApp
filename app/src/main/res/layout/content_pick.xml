@@ -6,23 +6,62 @@
     tools:context="example.s.orijinaru3.ContentPickActivity">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="?attr/colorPrimary"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent">
 
-        <TextView
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="内容"
-            android:id="@+id/contentsign"
-            android:gravity="bottom"
-            android:textColor="#ffffff"
-            android:textSize="25dp"
-            android:paddingLeft="50dp"
-            android:paddingBottom="15dp" />
+            android:layout_height="100dp"
+            android:background="?attr/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="内容"
+                android:id="@+id/contentsign"
+                android:gravity="bottom"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:paddingLeft="50dp"
+                android:paddingBottom="15dp"
+                android:textStyle="normal|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textInputLayout">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText"
+                    android:allowUndo="false"
+                    android:layout_marginTop="20dp"
+                    android:inputType="text"
+                    android:hint="宿題のの内容を入力" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:entries="@array/content"/>
+
+
+        </LinearLayout>
+
     </LinearLayout>
+
+
 </RelativeLayout>

@@ -7,11 +7,11 @@
         android:title="@string/action_setting"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/save"
-        android:icon="@drawable/save_black_icon"
-        android:title="保存"
-        app:showAsAction="ifRoom"
-        />
+    <!--<item-->
+        <!--android:id="@+id/save"-->
+        <!--android:icon="@drawable/save_black_icon"-->
+        <!--android:title="保存"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--/>-->
 
 </menu>

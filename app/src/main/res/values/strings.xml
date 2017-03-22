@@ -2,4 +2,29 @@
     <string name="app_name">orijinaru3</string>
     <string name="title_activity_subject_list">SubjectListActivity</string>
     <string name="action_setting">設定</string>
+
+    <string-array name="content">
+        <item>No</item>
+        <item>P</item>
+    </string-array>
+
+    <string-array name="subject">
+        <!--<item>教科を選択</item>-->
+        <item>古典</item>
+        <item>現代文</item>
+        <item>数I</item>
+        <item>数Ⅱ</item>
+        <item>英語</item>
+        <item>英語表現</item>
+        <item>コミュ英語</item>
+        <item>物理</item>
+        <item>化学</item>
+        <item>生物</item>
+        <item>地学</item>
+        <item>地理</item>
+        <item>世界史</item>
+        <item>日本史</item>
+    </string-array>
+
+
 </resources>

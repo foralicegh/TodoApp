@@ -17,25 +17,25 @@ import java.util.List;
  * Created by s on 2016/12/16.
  */
 public class CustomAdapter extends ArrayAdapter<Homework> {
-    List<Homework> hwList;
+    List<Homework> homeworkList;
     private LayoutInflater inflater;
 
     //コンストラクタ
     public CustomAdapter(Context context, int textViewResourceId, List<Homework> cList) {
         super(context, textViewResourceId, cList);
-        this.hwList = cList;
+        this.homeworkList = cList;
     }
 
 
 
     @Override
     public int getCount() {
-        return hwList.size();
+        return homeworkList.size();
     }
 
     @Override
     public Homework getItem(int position) {
-        return hwList.get(position);
+        return homeworkList.get(position);
     }
 
 

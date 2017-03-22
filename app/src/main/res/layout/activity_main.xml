@@ -9,7 +9,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -19,79 +20,95 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#03A9F4"
             app:theme="@style/ThemeOverlay.AppCompat"
-            android:layout_marginBottom="10dp" />
+            android:elevation="10dp" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp">
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.07">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/sImageView"
                 android:layout_marginRight="5dp"
-                android:layout_gravity="center"
-                android:src="@drawable/subject_black_icon" />
+                android:src="@drawable/subject_black_icon"
+                android:layout_gravity="center_vertical" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/sTextView"
+                android:id="@+id/ sTextView"
+                android:layout_weight="1"
+                android:textSize="20sp"
                 android:hint="教科を選択"
                 android:gravity="center_vertical"
-                android:textSize="20sp"
-                android:layout_weight="1"
+                android:clickable="false"
                 android:textColor="#000000" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="選択"
-                android:id="@+id/button"
-                android:onClick="subjectpick"
-                android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp">
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="55dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/cImageView"
                 android:layout_marginRight="5dp"
-                android:layout_gravity="center"
-                android:src="@drawable/iassignment_black_icon" />
+                android:src="@drawable/iassignment_black_icon"
+                android:paddingTop="22dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:hint="内容を入力"
-                android:textSize="20sp"
-                android:textColor="#000000"
-                android:id="@+id/cTextView" />
-
-            <Button
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="選択"
-                android:onClick="contentpick" />
+                android:layout_weight="0.99">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="宿題の内容を入力"
+                    android:id="@+id/cEditText"
+                    android:layout_gravity="center_vertical"
+                    android:maxLength="30" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/add_circle_outline_black"
+                android:id="@+id/imageButton"
+                android:background="?android:attr/windowBackground"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:onClick="helper" />
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp">
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_weight="0.07"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -112,14 +129,20 @@
                 android:textSize="20sp"
                 android:textColor="#000000" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="選択"
-                android:id="@+id/button2"
-                android:onClick="datepick" />
-
         </LinearLayout>
+
+        <Button
+            android:text="保存"
+            android:layout_width="match_parent"
+            android:id="@+id/save"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="save"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/flame_style"
+            android:layout_height="38dp"
+            android:layout_gravity="right" />
 
     </LinearLayout>
 

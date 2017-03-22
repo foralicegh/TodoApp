@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/delete"
-        app:showAsAction="always"
-        android:icon="@drawable/delete_black_icon"
-        android:title="削除"
-        />
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:title="入力ヘルパーの設定" />
+    <item android:title="選択する教科の設定"
+        android:id="@+id/action_add" />
+
+    <!--<item-->
+        <!--android:id="@+id/delete"-->
+        <!--app:showAsAction="always"-->
+        <!--android:icon="@drawable/delete_black_icon"-->
+        <!--android:title="削除"-->
+        <!--/>-->
 </menu>
